@@ -5,7 +5,7 @@
 Summary:	New Portable Threads Library
 Name:		npth
 Version:	1.1
-Release:	2
+Release:	3
 License:	LGPLv2+
 Group:		System/Libraries
 Url:		git://git.gnupg.org/npth.git
