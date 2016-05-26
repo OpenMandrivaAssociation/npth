@@ -4,13 +4,12 @@
 
 Summary:	New Portable Threads Library
 Name:		npth
-Version:	1.1
-Release:	3
+Version:	1.2
+Release:	1
 License:	LGPLv2+
 Group:		System/Libraries
 Url:		git://git.gnupg.org/npth.git
 Source0:	ftp://ftp.gnupg.org/gcrypt/npth/%{name}-%{version}.tar.bz2
-Source1:	ftp://ftp.gnupg.org/gcrypt/npth/%{name}-%{version}.tar.bz2.sig
 
 %description
 nPth is a non-preemptive threads implementation using an API very similar
