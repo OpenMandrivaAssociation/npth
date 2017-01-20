@@ -4,7 +4,7 @@
 
 Summary:	New Portable Threads Library
 Name:		npth
-Version:	1.2
+Version:	1.3
 Release:	1
 License:	LGPLv2+
 Group:		System/Libraries
@@ -52,7 +52,7 @@ applications or libraries that use %{name} library.
 %build
 %make
 
-%check 
+%check
 %make check
 
 %install
@@ -65,7 +65,7 @@ ln -srf %{buildroot}/%{_lib}/libnpth.so.%{major}.*.* %{buildroot}%{_libdir}/libn
 /%{_lib}/libnpth.so.%{major}*
 
 %files -n %{devname}
-%doc AUTHORS ChangeLog NEWS README
+%doc AUTHORS NEWS README
 %{_bindir}/npth-config
 %{_datadir}/aclocal/npth.m4
 %{_includedir}/npth.h
