@@ -4,7 +4,7 @@
 
 Summary:	New Portable Threads Library
 Name:		npth
-Version:	1.3
+Version:	1.5
 Release:	1
 License:	LGPLv2+
 Group:		System/Libraries
