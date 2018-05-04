@@ -1,11 +1,11 @@
-%define	major	0
-%define	libname	%mklibname %{name} %{major}
-%define	devname	%mklibname %{name} -d
+%define major 0
+%define libname %mklibname %{name} %{major}
+%define devname %mklibname %{name} -d
 
 Summary:	New Portable Threads Library
 Name:		npth
 Version:	1.5
-Release:	1
+Release:	2
 License:	LGPLv2+
 Group:		System/Libraries
 Url:		git://git.gnupg.org/npth.git
@@ -17,7 +17,7 @@ to the one known from GNU Pth.  It has been designed as a replacement of
 GNU Pth for non-ancient operating systems.  In contrast to GNU Pth is is
 based on the system's standard threads implementation.
 
-%package -n	%{libname}
+%package -n %{libname}
 Summary:	New Portable Threads Library
 Group:		System/Libraries
 
@@ -29,13 +29,13 @@ based on the system's standard threads implementation.
 
 This package provides the main %{name} library.
 
-%package -n	%{devname}
+%package -n %{devname}
 Summary:	New Portable Threads Library (Headers and Static Libs)
 Group:		Development/C
 Requires:	%{libname} = %{version}
 Provides:	%{name}-devel = %{version}-%{release}
 
-%description -n	%{devname}
+%description -n %{devname}
 nPth is a non-preemptive threads implementation using an API very similar
 to the one known from GNU Pth.  It has been designed as a replacement of
 GNU Pth for non-ancient operating systems.  In contrast to GNU Pth is is
