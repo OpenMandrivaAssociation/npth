@@ -5,7 +5,7 @@
 Summary:	New Portable Threads Library
 Name:		npth
 Version:	1.6
-Release:	2
+Release:	3
 License:	LGPLv2+
 Group:		System/Libraries
 Url:		git://git.gnupg.org/npth.git
@@ -45,18 +45,17 @@ This package provides all necessary files to develop or compile any
 applications or libraries that use %{name} library.
 
 %prep
-%setup -q
-%apply_patches
+%autosetup -p1
 
 %build
 %configure
-%make
+%make_build
 
 %check
 %make check
 
 %install
-%makeinstall_std
+%make_install
 mkdir -p %{buildroot}/%{_lib}
 mv %{buildroot}%{_libdir}/libnpth.so.%{major}* %{buildroot}/%{_lib}
 ln -srf %{buildroot}/%{_lib}/libnpth.so.%{major}.*.* %{buildroot}%{_libdir}/libnpth.so
