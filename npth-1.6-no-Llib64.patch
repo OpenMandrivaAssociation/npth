@@ -1,0 +1,12 @@
+diff -up npth-1.6/npth-config.in.omv~ npth-1.6/npth-config.in
+--- npth-1.6/npth-config.in.omv~	2023-08-07 21:25:12.130147679 +0200
++++ npth-1.6/npth-config.in	2023-08-07 21:26:12.244736242 +0200
+@@ -110,7 +110,7 @@ while test $# -gt 0; do
+             for i in $libs ; do
+               skip=no
+               case $i in
+-                  -L/usr/lib|-L/lib)
++                  -L/usr/lib|-L/lib|-L/usr/lib64|-L/lib64)
+                       skip=yes
+                       ;;
+                   -L*|-l*)

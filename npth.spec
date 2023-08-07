@@ -11,6 +11,7 @@ License:	LGPLv2+
 Group:		System/Libraries
 Url:		git://git.gnupg.org/npth.git
 Source0:	https://www.gnupg.org/ftp/gcrypt/npth/%{name}-%{version}.tar.bz2
+Patch0:		npth-1.6-no-Llib64.patch
 
 %description
 nPth is a non-preemptive threads implementation using an API very similar
@@ -48,9 +49,9 @@ applications or libraries that use %{name} library.
 
 %prep
 %autosetup -p1
+%configure
 
 %build
-%configure
 %make_build
 
 %if ! %{cross_compiling}
