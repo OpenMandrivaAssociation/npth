@@ -1,15 +1,16 @@
 %define major 0
-%define libname %mklibname %{name} %{major}
+%define oldlibname %mklibname %{name} 0
+%define libname %mklibname %{name}
 %define devname %mklibname %{name} -d
 
 Summary:	New Portable Threads Library
 Name:		npth
 Version:	1.6
-Release:	5
+Release:	6
 License:	LGPLv2+
 Group:		System/Libraries
 Url:		git://git.gnupg.org/npth.git
-Source0:	ftp://ftp.gnupg.org/gcrypt/npth/%{name}-%{version}.tar.bz2
+Source0:	https://www.gnupg.org/ftp/gcrypt/npth/%{name}-%{version}.tar.bz2
 
 %description
 nPth is a non-preemptive threads implementation using an API very similar
@@ -20,6 +21,7 @@ based on the system's standard threads implementation.
 %package -n %{libname}
 Summary:	New Portable Threads Library
 Group:		System/Libraries
+%rename %{oldlibname}
 
 %description -n %{libname}
 nPth is a non-preemptive threads implementation using an API very similar
@@ -51,8 +53,10 @@ applications or libraries that use %{name} library.
 %configure
 %make_build
 
+%if ! %{cross_compiling}
 %check
 %make check
+%endif
 
 %install
 %make_install
