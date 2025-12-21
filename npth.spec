@@ -13,6 +13,11 @@ Url:		git://git.gnupg.org/npth.git
 Source0:	https://www.gnupg.org/ftp/gcrypt/npth/%{name}-%{version}.tar.bz2
 Patch0:		npth-1.6-no-Llib64.patch
 
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 %description
 nPth is a non-preemptive threads implementation using an API very similar
 to the one known from GNU Pth.  It has been designed as a replacement of
