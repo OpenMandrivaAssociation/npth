@@ -5,13 +5,13 @@
 
 Summary:	New Portable Threads Library
 Name:		npth
-Version:	1.6
-Release:	6
+Version:	1.8
+Release:	1
 License:	LGPLv2+
 Group:		System/Libraries
 Url:		git://git.gnupg.org/npth.git
 Source0:	https://www.gnupg.org/ftp/gcrypt/npth/%{name}-%{version}.tar.bz2
-Patch0:		npth-1.6-no-Llib64.patch
+# dropped (no longer applies): Patch0:		npth-1.8-no-Llib64.patch
 
 BuildRequires:	autoconf
 BuildRequires:	automake
