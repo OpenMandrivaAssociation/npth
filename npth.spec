@@ -6,7 +6,7 @@
 Summary:	New Portable Threads Library
 Name:		npth
 Version:	1.8
-Release:	1
+Release:	2
 License:	LGPLv2+
 Group:		System/Libraries
 Url:		git://git.gnupg.org/npth.git
@@ -72,7 +72,7 @@ applications or libraries that use %{name} library.
 
 %files -n %{devname}
 %doc AUTHORS NEWS README
-%{_bindir}/npth-config
 %{_datadir}/aclocal/npth.m4
 %{_includedir}/npth.h
 %{_libdir}/libnpth.so
+%{_libdir}/pkgconfig/npth.pc
